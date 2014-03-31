@@ -1,6 +1,6 @@
 //
 //  main.c
-//  Sum and num
+//  Ternimate
 //
 //  Created by Vaughn Clayton on 4/1/13.
 //  Copyright (c) 2013 Vaughn Clayton. All rights reserved.
@@ -10,19 +10,19 @@
 
 int main()
 {
-    int numbers[10],sum,count,value;
+    int sum,count,value;
+    float avg;
     sum=count=0;
-    printf("Enter a value\n");
-    scanf("%d",&value);
-    while(value!=-99)
+    while (value!=-99)
     {
-        numbers[count]=value;
-        sum=sum+numbers[count];
         printf("Enter a value\n");
         scanf("%d",&value);
+        sum=sum+value;
+        count=count+1;
     }
-    printf("\nsum=,%d",sum);
+    avg=sum/count;
+    printf("\nThe Sum of the numbers are%d",sum);
+    printf("\nThe Average of numbers are%.0f",avg);
     getchar();
     getchar();
-    return 0;
 }
